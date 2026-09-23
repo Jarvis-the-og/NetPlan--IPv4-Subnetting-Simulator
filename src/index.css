@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-white dark:bg-slate-950 text-slate-950 dark:text-slate-50 transition-colors;
+}
+
+/* Monospace typography for IP addresses and technical content */
+.font-mono-ip {
+  @apply font-mono text-sm;
+}
+
+/* Smooth transitions */
+.transition-smooth {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+/* Focus states */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-950;
+}
+
+/* Card styling */
+.card {
+  @apply bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-700 shadow-sm;
+}
+
+/* Button base */
+.btn-base {
+  @apply px-4 py-2 rounded-lg font-medium transition-smooth focus-ring cursor-pointer;
+}
+
+.btn-primary {
+  @apply btn-base bg-blue-600 hover:bg-blue-700 text-white;
+}
+
+.btn-secondary {
+  @apply btn-base bg-slate-200 dark:bg-slate-700 hover:bg-slate-300 dark:hover:bg-slate-600 text-slate-950 dark:text-slate-50;
+}
+
+.btn-danger {
+  @apply btn-base bg-red-600 hover:bg-red-700 text-white;
+}
+
+/* Input styling */
+.input-base {
+  @apply w-full px-3 py-2 rounded-lg border border-slate-300 dark:border-slate-600 bg-white dark:bg-slate-800 text-slate-950 dark:text-slate-50 focus-ring;
+}
+
+/* Badge */
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-primary {
+  @apply badge bg-blue-100 dark:bg-blue-900 text-blue-900 dark:text-blue-100;
+}
+
+.badge-success {
+  @apply badge bg-green-100 dark:bg-green-900 text-green-900 dark:text-green-100;
+}
+
+.badge-warning {
+  @apply badge bg-yellow-100 dark:bg-yellow-900 text-yellow-900 dark:text-yellow-100;
+}
+
+.badge-error {
+  @apply badge bg-red-100 dark:bg-red-900 text-red-900 dark:text-red-100;
+}
