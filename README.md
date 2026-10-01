@@ -2,7 +2,59 @@
 
 A modern, interactive web application for learning and mastering IPv4 subnetting concepts. NetPlan provides hands-on experience with both FLSM (Fixed Length Subnet Masking) and VLSM (Variable Length Subnet Masking) through real-world scenarios.
 
-## Features
+---
+
+## 🚀 Quick Start in 3 Steps
+
+### Step 1: Start the Application
+```bash
+git clone https://github.com/Jarvis-the-og/NetPlan--IPv4-Subnetting-Simulator.git
+cd "NetPlan--IPv4-Subnetting-Simulator"
+npm install  # Only needed first time
+npm run dev
+```
+The application will open at: **http://localhost:5173/**
+
+### Step 2: Choose Your Mode
+On the landing page, select one of:
+- **FLSM** - For learning fixed-size subnetting
+- **VLSM** - For learning variable-size subnetting
+- **About** - For learning resources
+
+### Step 3: Start Subnetting!
+
+---
+
+## 💡 Quick Examples
+
+### Example 1: FLSM (5 minutes)
+1. Click **FLSM**
+2. Enter network: `192.168.1.0`
+3. Set prefix: `24`
+4. Choose "Hosts Per Subnet"
+5. Enter `50` hosts
+6. Click Calculate
+7. View results and download if needed
+
+**Result**: 4 subnets of /26, each with 62 usable hosts
+
+### Example 2: VLSM (10 minutes)
+1. Click **VLSM**
+2. Enter network: `192.168.10.0`
+3. Set prefix: `24`
+4. Add departments:
+   - Department 1: 60 hosts
+   - Department 2: 30 hosts
+   - Department 3: 10 hosts
+5. Click Calculate
+6. View visualization showing how subnets fit
+7. See FLSM comparison (would use 100% of space)
+
+**Result**: VLSM uses only ~43% of space vs 100% with FLSM
+
+---
+
+## 🌟 Features
 
 ### 🎯 FLSM Calculator
 - Define network requirements by either:
@@ -19,12 +71,12 @@ A modern, interactive web application for learning and mastering IPv4 subnetting
 - Visual representation of address space allocation
 - Proportional block visualization showing how subnets fit together
 - Automatic FLSM vs VLSM efficiency comparison
-- Interactive address range tooltips
+- Interactive address range tooltips showing subnet names, network address, CIDR, broadcast, and total addresses.
 
 ### 📊 Address Space Visualization
 - Proportional block representation of subnet allocation
 - Color-coded subnets for easy identification
-- Hover tooltips showing subnet details
+- Hover tooltips showing detailed subnet metrics
 - Detailed breakdown table with address calculations
 - Clear visualization of unused address space
 
@@ -35,101 +87,49 @@ A modern, interactive web application for learning and mastering IPv4 subnetting
 - Learning tips and best practices
 - Technical implementation details
 
-## Technology Stack
+---
 
-- **Frontend**: React 18 with TypeScript
-- **Styling**: Tailwind CSS
-- **Build Tool**: Vite
-- **Visualization**: Recharts
+## 🏗️ Technical Architecture
+
+The application strictly separates the UI from the calculation logic (Separation of Concerns).
+
+### Technology Stack
+- **Frontend**: React 18 with TypeScript 5
+- **Styling**: Tailwind CSS 3
+- **Build Tool**: Vite 5
+- **Visualization**: Recharts 2
 - **Icons**: Lucide React
 
-## Installation
-
-### Prerequisites
-- Node.js 16+ and npm
-
-### Setup
-
-```bash
-cd "c:\workspace personal\Netplan"
-npm install
-```
-
-## Development
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The application will be available at `http://localhost:5173/`
-
-## Production Build
-
-Build for production:
-
-```bash
-npm run build
-```
-
-This creates an optimized build in the `dist/` directory.
-
-Preview the build locally:
-
-```bash
-npm run preview
-```
-
-## Project Structure
-
+### Project Structure
 ```
 src/
 ├── components/          # React components
-│   ├── About.tsx       # About/Learning page
+│   ├── About.tsx        # About/Learning page
 │   ├── ComparisonChart.tsx # FLSM vs VLSM comparison
 │   ├── FLSMWorkflow.tsx # FLSM calculator workflow
 │   ├── FLSMRequirements.tsx # FLSM input form
-│   ├── FLSMResults.tsx # FLSM calculation results
-│   ├── Landing.tsx # Home page
-│   ├── Navigation.tsx # Navigation bar
+│   ├── FLSMResults.tsx  # FLSM calculation results
+│   ├── Landing.tsx      # Home page
+│   ├── Navigation.tsx   # Navigation bar
 │   ├── NetworkInput.tsx # Shared network input form
-│   ├── SubnetTable.tsx # Subnet results table
+│   ├── SubnetTable.tsx  # Subnet results table
 │   ├── SubnetVisualizer.tsx # Address space visualization
 │   ├── VLSMWorkflow.tsx # VLSM calculator workflow
 │   ├── VLSMRequirements.tsx # VLSM input form
-│   └── VLSMResults.tsx # VLSM calculation results
-├── engine/             # Calculation logic
-│   ├── ipv4.ts        # IPv4 address utilities
-│   ├── flsm.ts        # FLSM algorithm
-│   ├── vlsm.ts        # VLSM algorithm
-│   ├── validator.ts   # Input validation
-│   └── calculations.test.ts # Test cases
+│   └── VLSMResults.tsx  # VLSM calculation results
+├── engine/              # Calculation logic
+│   ├── ipv4.ts          # IPv4 address utilities
+│   ├── flsm.ts          # FLSM algorithm
+│   ├── vlsm.ts          # VLSM algorithm
+│   └── validator.ts     # Input validation
 ├── types/
-│   └── subnet.ts      # TypeScript interfaces
-├── App.tsx            # Main app component
-├── index.css          # Global styles
-└── main.tsx           # Entry point
+│   └── subnet.ts        # TypeScript interfaces
+├── App.tsx              # Main app component
+├── index.css            # Global styles
+└── main.tsx             # Entry point
 ```
 
-## How to Use
-
-### FLSM Mode
-1. Enter your base network address and CIDR prefix
-2. Choose whether to define by hosts per subnet or number of subnets
-3. Enter your requirement
-4. Review the calculated subnet allocation
-5. Download results if needed
-
-### VLSM Mode
-1. Enter your base network address and CIDR prefix
-2. Add each department/segment with its host requirement
-3. Watch the algorithm allocate optimal subnet sizes
-4. View the visual representation of address space
-5. Compare with equivalent FLSM allocation
-6. Download results if needed
-
-## Calculation Engine
+## 🧠 Calculation Engine
 
 ### IPv4 Utilities
 - IP address parsing and validation
@@ -159,91 +159,44 @@ src/
 - Duplicate name detection
 - Overflow detection
 
-## Key Concepts
+---
 
-### Network Address
-The first address in a subnet, used to identify the subnet itself.
+## 📖 Key Concepts
 
-### Broadcast Address
-The last address in a subnet, used for broadcasting to all hosts.
+- **Network Address**: The first address in a subnet, used to identify the subnet itself.
+- **Broadcast Address**: The last address in a subnet, used for broadcasting to all hosts.
+- **Usable Host Addresses**: All addresses between network and broadcast addresses.
+- **Subnet Mask**: Shows which portion of an IP address represents the network.
+- **CIDR Notation**: Compact representation like 192.168.0.0/24 (address/prefix length).
+- **FLSM (Fixed Length Subnet Masking)**: All subnets have the same size and mask. Simple but can waste addresses.
+- **VLSM (Variable Length Subnet Masking)**: Subnets have different sizes based on requirements. More efficient and flexible.
 
-### Usable Host Addresses
-All addresses between network and broadcast addresses.
+---
 
-### Subnet Mask
-Shows which portion of an IP address represents the network.
+## 🛠️ Production Build
 
-### CIDR Notation
-Compact representation like 192.168.0.0/24 (address/prefix length).
+Build for production:
+```bash
+npm run build
+```
+This creates an optimized build in the `dist/` directory.
 
-### FLSM
-Fixed Length Subnet Masking - all subnets have the same size and mask. Simple but can waste addresses.
+Preview the build locally:
+```bash
+npm run preview
+```
 
-### VLSM
-Variable Length Subnet Masking - subnets have different sizes based on requirements. More efficient and flexible.
+---
 
-## Examples
-
-### Example 1: FLSM with 50 hosts per subnet
-- Network: 192.168.1.0/24
-- Requirement: 50 hosts per subnet
-- Result: /26 (62 usable hosts), 4 subnets total
-
-### Example 2: VLSM with mixed requirements
-- Network: 192.168.10.0/24
-- Requirements:
-  - Admin: 60 hosts → /26 (64 addresses)
-  - Engineering: 30 hosts → /27 (32 addresses)
-  - Accounts: 14 hosts → /28 (16 addresses)
-  - HR: 6 hosts → /29 (8 addresses)
-  - WAN Link: 2 hosts → /30 (4 addresses)
-- Total: 124 addresses used (48.4% efficiency vs 100% with FLSM)
-
-## Accuracy and Reliability
-
-All calculations are performed locally in the browser using custom TypeScript algorithms. The calculation engine has been verified against known test cases:
-
-- ✓ FLSM host-to-prefix conversion
-- ✓ FLSM subnet generation and boundaries
-- ✓ VLSM sorting and allocation
-- ✓ VLSM overlap prevention
-- ✓ Address space utilization
-- ✓ Boundary checking and validation
-
-## Browser Support
-
-- Chrome/Edge 90+
-- Firefox 88+
-- Safari 14+
-- Modern mobile browsers
-
-## Performance
-
-- All calculations performed instantly in the browser
+## 🌐 Browser Support & Performance
+- Chrome/Edge 90+ | Firefox 88+ | Safari 14+ | Modern mobile browsers
+- All calculations performed instantly (<10ms) in the browser
 - No network requests required for calculations
-- Lightweight application (~600KB gzipped)
-- Responsive design optimized for all screen sizes
+- Lightweight application (~164KB gzipped)
+- Responsive design optimized for all screen sizes (mobile-friendly)
 
-## Educational Use
-
-NetPlan is designed as an educational tool for:
-- Computer Science students learning networking
-- IT professionals preparing for certifications (CCNA, CompTIA)
-- Network administrators designing subnets
-- Anyone learning IPv4 subnetting concepts
-
-## License
-
+## 📝 License
 This project is created for educational purposes.
 
-## Support
-
+## 🤝 Support
 For issues, questions, or suggestions, please refer to the About section within the application for more learning resources.
-
-## Changelog
-
-### Version 1.0.0
-- Initial release
-- FLSM and VLSM calculators
-- Interactive visualization
-- Comprehensive learning resources
