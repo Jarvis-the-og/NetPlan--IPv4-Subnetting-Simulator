@@ -1,6 +1,6 @@
 # NetPlan - Interactive FLSM & VLSM Subnetting Simulator
 
-A modern, interactive web application for learning and mastering IPv4 subnetting concepts. NetPlan provides hands-on experience with both FLSM (Fixed Length Subnet Masking) and VLSM (Variable Length Subnet Masking) through real-world scenarios and interactive challenges.
+A modern, interactive web application for learning and mastering IPv4 subnetting concepts. NetPlan provides hands-on experience with both FLSM (Fixed Length Subnet Masking) and VLSM (Variable Length Subnet Masking) through real-world scenarios.
 
 ## Features
 
@@ -27,13 +27,6 @@ A modern, interactive web application for learning and mastering IPv4 subnetting
 - Hover tooltips showing subnet details
 - Detailed breakdown table with address calculations
 - Clear visualization of unused address space
-
-### 🏆 Challenge Mode
-- Three difficulty levels: Beginner, Intermediate, Advanced
-- Auto-generated subnetting problems
-- Real-time answer validation
-- Immediate feedback on correctness
-- Step-by-step solution explanation
 
 ### 📚 Comprehensive About Section
 - Detailed explanation of subnetting concepts
@@ -94,7 +87,6 @@ npm run preview
 src/
 ├── components/          # React components
 │   ├── About.tsx       # About/Learning page
-│   ├── ChallengeMode.tsx # Challenge problems
 │   ├── ComparisonChart.tsx # FLSM vs VLSM comparison
 │   ├── FLSMWorkflow.tsx # FLSM calculator workflow
 │   ├── FLSMRequirements.tsx # FLSM input form
@@ -136,13 +128,6 @@ src/
 4. View the visual representation of address space
 5. Compare with equivalent FLSM allocation
 6. Download results if needed
-
-### Challenge Mode
-1. Select a difficulty level (Beginner, Intermediate, Advanced)
-2. Review the network requirements
-3. Fill in the subnet allocation answers
-4. Submit for validation
-5. Get feedback and try again or move to new challenge
 
 ## Calculation Engine
 
@@ -261,5 +246,4 @@ For issues, questions, or suggestions, please refer to the About section within 
 - Initial release
 - FLSM and VLSM calculators
 - Interactive visualization
-- Challenge mode
 - Comprehensive learning resources

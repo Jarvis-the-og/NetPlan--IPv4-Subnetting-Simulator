@@ -15,7 +15,6 @@ The application will open at: **http://localhost:5173/**
 On the landing page, select one of:
 - **FLSM** - For learning fixed-size subnetting
 - **VLSM** - For learning variable-size subnetting
-- **Challenge** - To test your skills
 - **About** - For learning resources
 
 ### Step 3: Start Subnetting!
@@ -48,16 +47,6 @@ On the landing page, select one of:
 7. See FLSM comparison (would use 100% of space)
 
 **Result**: VLSM uses only ~43% of space vs 100% with FLSM
-
-### Example 3: Challenge (15 minutes)
-1. Click **Challenge**
-2. Select difficulty: **Beginner**
-3. Click "Generate Challenge"
-4. Review the network requirements
-5. Fill in your subnet calculations
-6. Click "Submit Answer"
-7. Get immediate feedback
-8. Try new challenges to improve
 
 ---
 
@@ -180,12 +169,6 @@ Inside the app, click **About** for comprehensive learning resources covering:
 3. Add: Sales 80, IT 40, HR 20, Guest WiFi 10
 4. View: Optimized allocation with efficiency
 
-### Test your knowledge
-1. Go to Challenge
-2. Select difficulty
-3. Solve problems
-4. Learn from feedback
-
 ---
 
 ## 💾 Exporting Results
@@ -233,15 +216,14 @@ NetPlan works on mobile devices!
 1. **Bookmark the page** for quick access
 2. **Export results** as you work for documentation
 3. **Try different networks** to understand patterns
-4. **Use Challenge mode** to reinforce learning
-5. **Check the About section** for detailed explanations
+4. **Check the About section** for detailed explanations
 
 ---
 
 ## ❓ FAQ
 
 **Q: How do I know if my calculation is correct?**
-A: Use the Challenge mode to verify your answers against the system.
+A: Verify your answers against the calculation results in FLSM or VLSM modes.
 
 **Q: Can I use real networks in the calculator?**
 A: Yes! Enter any valid IPv4 network address and prefix.
@@ -265,8 +247,7 @@ A: /0 to /32 prefixes are supported.
 1. **Start with FLSM** - Understand the basics
 2. **Learn the formula** - 2^h - 2 ≥ required hosts
 3. **Try VLSM** - See how to optimize
-4. **Use Challenge** - Test your understanding
-5. **Read About** - Deepen your knowledge
+4. **Read About** - Deepen your knowledge
 
 ---
 
